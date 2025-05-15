@@ -1,0 +1,49 @@
+---
+title: "Learning About Data Science"
+author: "Zach Ginder"
+format: html
+editor: visual
+---
+
+### Questions
+
+1.  What do you think being a data scientist is about?
+
+    I think being a data scientist means being able to process/clean data while also utilizing data in an efficient way like modeling.
+
+2.  What differences/similarities do you see between data scientists and statisticians?
+
+    As learned from the textbook, these are some similarities:
+
+    -   Data Scientists and Statisticians work closely with data.
+
+    Some Differences are as follows:
+
+    -    Statisticians mainly focus on modeling while Data Scientists focus on business problems and results
+    -   Statisticians many times deal with small data sizes that are usually structured and are able to make statistical inferences utilizing that data. Data Scientists work with large and many times messy data that can be structured or unstructured.
+
+3.  How do you view yourself in relation to these two areas?
+
+    I do view myself as more of a statistician than a data scientist.
+
+### Code
+
+Utilizing the iris data set, the first code chunk saves the density of the Petal Width data as "y." Then analysis is performed on the "y" to determine its class, type, and structure.
+
+```{r}
+#Store the data
+y <- density(iris$Petal.Width)
+
+#Determine class, type, and structure of y
+cat("The class of y:", class(y),"\n")
+cat("The data y is of the type:", typeof(y),"\n")
+cat("The following is the structure of y: \n")
+str(y)
+```
+
+The second code chunk shows the plot of the density of the Petal Width data from the iris data set.
+
+```{r}
+#| echo: false
+plot(y, main="Density of Petal Width From Iris")
+```
